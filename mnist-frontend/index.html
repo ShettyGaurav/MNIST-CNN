@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MNIST Digit Classifier</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      margin: 40px;
+      background-color: #f4f4f4;
+    }
+    h1 {
+      color: #333;
+    }
+    .preview {
+      width: 280px;
+      height: 280px;
+      border: 2px dashed #000;
+      margin: 20px auto;
+      background: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    .preview img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin: 10px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0056b3;
+    }
+    .upload-btn {
+      background: #28a745;
+    }
+    .upload-btn:hover {
+      background: #1e7e34;
+    }
+    #result {
+      margin-top: 20px;
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+    }
+    input[type="file"] {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🖼️ MNIST Digit Classifier</h1>
+  <p>Upload a handwritten digit image (PNG/JPG)</p>
+
+  <!-- Image Preview Box -->
+  <div class="preview" id="preview">
+    <span>No image selected</span>
+  </div>
+
+  <!-- Buttons -->
+  <input type="file" id="uploadInput" accept="image/*">
+  <button id="uploadBtn" class="upload  -btn">📂 Choose Image</button>
+  <button id="predictBtn" disabled>📤 Predict</button>
+
+  <!-- Result -->
+  <div id="result">📤 Upload an image to predict</div>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
